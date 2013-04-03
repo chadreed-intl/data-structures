@@ -11,8 +11,12 @@ var makeStack = function(){
   };
 
   stack.remove = function(){
-    size --;
-    return storage[size];
+    if (size > 0){
+      size --;
+      return storage[size];
+    } else {
+      return null;
+    }
   };
 
   stack.size = function(){
