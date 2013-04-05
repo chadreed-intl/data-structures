@@ -1,30 +1,32 @@
-var makeStack = function(){
-  var stack = {};
-  var storage = {}; // You'll use an object with numeric keys to store queue
-                    // elements, since using an Array would defeat the purpose.
-  var size = 0;
 
 var stackMethods = {
-  // fill out these methods
-  add: function(input){
-    storage[size] = input;
-    size ++;
-  };
 
-  remove:function(){
-    if (size > 0){
-      size --;
-      return storage[size];
+  add: function(input){
+    this._storage[this._counter] = input;
+    this._counter ++;
+  },
+
+  remove: function(){
+    if (this._counter > 0){
+      this._counter --;
+      return this._storage[this._counter];
     } else {
       return null;
     }
-  };
+  },
 
   size: function(){
-    return size;
-  };
+    return this._counter;
+  },
 
 };
+
+
+var makeStack = function(){
+  var stack = _.extend({}, stackMethods);
+  stack._storage = {}; 
+  stack._counter = 0;
 
   return stack;
 };
+

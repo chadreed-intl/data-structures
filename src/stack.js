@@ -1,3 +1,4 @@
+debugger;
 var makeStack = function(){
   var stack = {};
   var storage = {}; // You'll use an object with numeric keys to store queue

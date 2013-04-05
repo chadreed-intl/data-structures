@@ -1,3 +1,4 @@
+debugger
 describe("stack", function() {
   var stack;
 
@@ -32,7 +33,7 @@ describe("stack", function() {
       expect(stack.size()).toEqual(0);
     });
 
-    it('should return null if there are no elements'. function(){
+    it('should return null if there are no elements', function(){
       expect(stack.remove()).toBe(null);
     });
 
